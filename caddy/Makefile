@@ -1,10 +1,4 @@
-run:
-	@cd docmost && make && cd -
-	@cd n8n && make && cd - 
-	@cd taiga && make && cd -
-	@cd caddy && make && cd -
-stop:
-	@cd caddy && make && cd -
-	@cd taiga && make && cd -
-	@cd n8n && make && cd - 
-	@cd docmost && make && cd -
+run :
+	@docker-compose -f compose.yml -p caddy up --build -d 
+stop :
+	@docker-compose -f compose.yml -p caddy down --remove-orphans

@@ -1,0 +1,15 @@
+docmost.localhost {
+  reverse_proxy docmost:3000
+}
+
+n8n.localhost {
+  reverse_proxy n8n-app:5678
+}
+
+openproject.localhost {
+  reverse_proxy openproject:80
+}
+
+taiga.localhost {
+  reverse_proxy taiga:80
+}
