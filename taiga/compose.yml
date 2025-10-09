@@ -153,7 +153,7 @@ services:
     ports:
       - "9000:80"
     volumes:
-      - ./taiga-gateway/taiga.conf:/etc/nginx/conf.d/default.conf
+      - ./taiga.conf:/etc/nginx/conf.d/default.conf
       - taiga-static-data:/taiga/static
       - taiga-media-data:/taiga/media
     networks:

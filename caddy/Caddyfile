@@ -3,7 +3,7 @@ docmost.localhost {
 }
 
 n8n.localhost {
-  reverse_proxy n8n-app:5678
+  reverse_proxy n8n-app:80
 }
 
 openproject.localhost {

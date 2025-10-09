@@ -3,6 +3,8 @@ run:
 	@cd n8n && make && cd - 
 	@cd taiga && make && cd - 
 	@cd caddy && make && cd -
+init:
+	@docker network create caddy_network taiga
 stop:
 	@cd caddy && make stop && cd -
 	@cd taiga && make stop && cd - 

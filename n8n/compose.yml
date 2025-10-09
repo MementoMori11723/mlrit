@@ -3,12 +3,12 @@ services:
     image: docker.n8n.io/n8nio/n8n
     container_name: n8n-app
     expose:
-      - "5678"
+      - "${N8N_PORT}"
     environment:
-      - N8N_HOST=n8n.yasasvi.site
-      - N8N_PORT=5678
-      - N8N_PROTOCOL=https
-      - WEBHOOK_TUNNEL_URL=https://n8n.yasasvi.site
+      N8N_HOST: "${N8N_HOST}"
+      N8N_PORT: "${N8N_PORT}"
+      N8N_PROTOCOL: "${N8N_PROTOCOL}"
+      WEBHOOK_TUNNEL_URL: "${WEBHOOK_TUNNEL_URL}"
     volumes:
       - n8n_data:/home/node/.n8n
     restart: always
