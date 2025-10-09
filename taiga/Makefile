@@ -1,10 +1,5 @@
 run:
-	@cd docmost && make && cd -
-	@cd n8n && make && cd - 
-	@cd taiga && make && cd -
-	@cd caddy && make && cd -
+	@./launch.sh
+	@./manage.sh createsuperuser
 stop:
-	@cd caddy && make && cd -
-	@cd taiga && make && cd -
-	@cd n8n && make && cd - 
-	@cd docmost && make && cd -
+	@docker compose -f docker-compose.yml down --remove-orphans
