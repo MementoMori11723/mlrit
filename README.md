@@ -38,9 +38,9 @@ mlrit
 
 Before you begin, make sure you have the following installed:
 
-* [Docker](https://docs.docker.com/get-docker/)
-* [Docker Compose](https://docs.docker.com/compose/install/)
-* [Make](https://www.gnu.org/software/make/)
+- [Docker](https://docs.docker.com/get-docker/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+- [Make](https://www.gnu.org/software/make/)
 
 ---
 
@@ -56,9 +56,9 @@ make
 
 This will:
 
-* Navigate into each service directory (`caddy`, `docmost`, `n8n`, and `taiga`)
-* Run the `make` command in each one (which runs its respective `docker compose` setup)
-* Return back to the root directory once done
+- Navigate into each service directory (`caddy`, `docmost`, `n8n`, and `taiga`)
+- Run the `make` command in each one (which runs its respective `docker compose` setup)
+- Return back to the root directory once done
 
 ---
 
@@ -70,9 +70,9 @@ make stop
 
 This will:
 
-* Go into each service directory
-* Run their `make stop` command (which stops their Docker containers)
-* Return to the root directory
+- Go into each service directory
+- Run their `make stop` command (which stops their Docker containers)
+- Return to the root directory
 
 ---
 
@@ -84,6 +84,8 @@ If you’re setting up **Taiga**, you can create a new admin user by running:
 cd taiga
 make admin
 ```
+
+> **Note:** if you are running this on a vps or a server then you need to run this command on that server or vps (not locally).
 
 ---
 
@@ -98,6 +100,8 @@ You can also manage each service independently:
 | **n8n**     | `n8n/`     | Workflow automation tool                             |
 | **Taiga**   | `taiga/`   | Project management platform with admin setup command |
 
+> You can view the services locally at: docmost.localhost, n8n.localhost, taiga.localhost
+
 ---
 
 ## 🧹 Cleanup
@@ -108,16 +112,16 @@ To stop and remove all containers, networks, and volumes used by these services:
 make stop
 ```
 
-*(Run from the root or inside any individual service directory.)*
+_(Run from the root or inside any individual service directory.)_
 
 ---
 
 ## 📄 Notes
 
-* Each service has its own `.env` file — copy from `example.env` before first use.
-* Ensure all services run on a shared Docker network if you plan to interconnect them.
-* Caddy automatically handles proxying and SSL for all subdomains configured in its `Caddyfile`.
-* To change the domain name you can edit the caddy file to do that.
+- Each service has its own `.env` file — copy from `example.env` before first use.
+- Ensure all services run on a shared Docker network if you plan to interconnect them.
+- Caddy automatically handles proxying and SSL for all subdomains configured in its `Caddyfile`.
+- To change the domain name you can edit the `Caddyfile` to do that (not nessary if running this locally).
 
 ---
 
