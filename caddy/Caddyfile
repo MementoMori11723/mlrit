@@ -6,10 +6,6 @@ n8n.localhost {
   reverse_proxy n8n-app:80
 }
 
-openproject.localhost {
-  reverse_proxy openproject:80
-}
-
 taiga.localhost {
   reverse_proxy taiga:80
 }
