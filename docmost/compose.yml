@@ -10,6 +10,14 @@ services:
       APP_SECRET: "${APP_SECRET}"
       DATABASE_URL: "${DATABASE_URL}"
       REDIS_URL: "${REDIS_URL}"
+      MAIL_DRIVER: "${MAIL_DRIVER}" 
+      SMTP_HOST: "${SMTP_HOST}"
+      SMTP_PORT: "${SMTP_PORT}" 
+      SMTP_USERNAME: "${SMTP_USERNAME}"
+      SMTP_PASSWORD: "${SMTP_PASSWORD}"
+      SMTP_SECURE: "${SMTP_SECURE}"
+      MAIL_FROM_ADDRESS: "${MAIL_FROM_ADDRESS}"
+      MAIL_FROM_NAME: "${MAIL_FROM_NAME}"
     expose:
       - "3000"
     restart: unless-stopped
