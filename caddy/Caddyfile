@@ -1,11 +1,11 @@
-docmost.localhost {
+docmost.mlrit.site {
   reverse_proxy docmost:3000
 }
 
-n8n.localhost {
+n8n.mlrit.site {
   reverse_proxy n8n-app:80
 }
 
-taiga.localhost {
+taiga.mlrit.site {
   reverse_proxy taiga:80
 }
